@@ -266,4 +266,3 @@ If `lspci` does not show the RPP device:
 ---
 
 *This SOP is provided for customer self-service deployment. For technical support, contact XDL Technical Support Team.*
->>>>>>> v1.7.2.5 x86 ubuntu
