@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-# xdl_sdk
-The XDL SDK is a full building and evaluation environment. It is intended for end customers, system integrators, and solution partners to independently complete environment setup, SDK installation, and functional validation of RPP AI acceleration hardware.
-=======
-# XDL SDK V1.7.2.5 — Customer Installation SOP
-
 ![XDL Logo](pic/logo_color_horizontal.png)
 
 **Technology Enterprise Edition** | AI-Optimized | Production-Ready
