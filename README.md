@@ -1,4 +1,4 @@
-![XDL Logo](pic/logo_color_horizontal.png)
+![XDL Logo](images/logo_color_horizontal.png)
 
 **Technology Enterprise Edition** | AI-Optimized | Production-Ready
 
