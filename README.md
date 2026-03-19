@@ -22,9 +22,9 @@ For exact package names, versions, and commands, always use the matching guide b
 
 | Document | English | 中文 |
 | -------- | ------- | ---- |
-| SDK Installation & Deployment Guide (x86) | [EN](xdl-sdk-installation-deployment-guide-x86-en.pdf) | [中文](xdl-sdk-installation-deployment-guide-x86-zh-cn.pdf) |
-| SDK Installation & Deployment Guide (ARM) | [EN](xdl-sdk-installation-deployment-guide-arm-en.pdf) | [中文](xdl-sdk-installation-deployment-guide-arm-zh-cn.pdf) |
-| Demo Guide | [EN](xdl-demo-guide-en.pdf) | [中文](xdl-demo-guide-zh-cn.pdf) |
+| SDK Installation & Deployment Guide (x86) | [EN](https://github.com/xdltek/rpp_r8_sdk/raw/main/xdl-sdk-installation-deployment-guide-x86-en.pdf) | [中文](https://github.com/xdltek/rpp_r8_sdk/raw/main/xdl-sdk-installation-deployment-guide-x86-zh-cn.pdf) |
+| SDK Installation & Deployment Guide (ARM) | [EN](https://github.com/xdltek/rpp_r8_sdk/raw/main/xdl-sdk-installation-deployment-guide-arm-en.pdf) | [中文](https://github.com/xdltek/rpp_r8_sdk/raw/main/xdl-sdk-installation-deployment-guide-arm-zh-cn.pdf) |
+| Demo Guide | [EN](https://github.com/xdltek/rpp_r8_sdk/raw/main/xdl-demo-guide-en.pdf) | [中文](https://github.com/xdltek/rpp_r8_sdk/raw/main/xdl-demo-guide-zh-cn.pdf) |
 
 ## Notes
 
