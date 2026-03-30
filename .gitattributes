@@ -1,1 +1,2 @@
 *.run filter=lfs diff=lfs merge=lfs -text
+sdk/azurengine_sw_v1.7.3.11_x86_Ubuntu.tar.gz filter=lfs diff=lfs merge=lfs -text

@@ -50,16 +50,29 @@ lspci | grep Co-processor
 
 
 
-## 3. SDK 安装 — 步骤 1：获取安装包
+## 3. SDK 安装 — 步骤 1：获取并解压安装包
 
-从官方渠道下载：
+x86 SDK 安装包位于 `sdk` 目录下：
 
 ```
-azurengine_sw_<version>_x86_Ubuntu.run
+azurengine_sw_v1.7.3.11_x86_Ubuntu.tar.gz
 ```
 
-示例：`azurengine_sw_v1.7.2.4_x86_Ubuntu.run`
+请先解压：
 
+```bash
+tar zxvf azurengine_sw_v1.7.3.11_x86_Ubuntu.tar.gz
+cd azurengine_sw_v1.7.3.11_x86_Ubuntu
+```
+
+解压后目录包含：
+
+- `azurengine_sw_v1.7.3.11_x86_Ubuntu.run`
+- `get_version.sh`
+- `install.sh`
+- `uninstall.sh`
+- `upgrade.sh`
+- `verify_run_file.sh`
 
 
 ## 3. SDK 安装 — 步骤 2：卸载旧版本（推荐）
@@ -75,21 +88,44 @@ bash /usr/local/rpp/doc/uninstall.sh
 
 
 
-## 3. SDK 安装 — 步骤 3：执行安装
+## 3. SDK 安装 — 步骤 3：运行安装与升级脚本
+
+校验 SDK 安装包：
 
 ```bash
-sudo chmod +x azurengine_sw_v1.7.2.4_x86_Ubuntu.run
-bash azurengine_sw_v1.7.2.4_x86_Ubuntu.run
+bash verify_run_file.sh
 ```
 
-安装过程中：
+预期输出：
 
-- 自动卸载并重装 RPP 驱动
-- 检查并安装系统依赖
+`Verification passed: MD5 checksum matches for file: azurengine_sw_v1.7.3.11_x86_Ubuntu.run`
 
-确认无报错并显示 SDK 版本与时间戳
+查看当前已安装版本：
 
+```bash
+bash get_version.sh
+```
 
+示例输出：
+
+`1.7.2.4`
+
+升级到新版本：
+
+```bash
+bash upgrade.sh
+```
+
+如果安装成功，输出类似：
+
+`Installation completed, sdk version: [1.7.3.11], creation timestamp: [20260326_195602].`
+
+另外，你也可以使用以下脚本安装新的SDK：
+
+```bash
+bash uninstall.sh
+bash install.sh
+```
 
 ## 4. 驱动安装与验证
 
@@ -205,6 +241,7 @@ XDL Technologies 产品符合相关安全与环保法规。用户应遵循产品
 - **版本 2.0**（2026-01-18）：RPP SDK 安装指南（x86_64 平台）初版发布。
 - **版本 2.1**（2026-02-07）：根据客户反馈更新版式并补充详细故障排除步骤。
 - **版本 2.2**（2026-03-19）：更新为 x86_64 平台《安装与部署指南》。
+- **版本 2.3**（2026-03-30）：更新 x86 SDK 安装说明，适配 `azurengine_sw_v1.7.3.11_x86_Ubuntu.tar.gz`。
 
 
 ## 修订历史
@@ -214,5 +251,6 @@ XDL Technologies 产品符合相关安全与环保法规。用户应遵循产品
 | 2.0  | 2026-01-18 | XDL 技术支持团队 | 初版                         |
 | 2.1  | 2026-02-07 | XDL 技术支持团队 | 发布                         |
 | 2.2  | 2026-03-19 | XDL 技术支持团队 | 更新为《安装与部署指南》     |
+| 2.3  | 2026-03-30 | XDL 技术支持团队 | 更新 x86 SDK 安装说明 |
 
 **技术支持**：XDL Demo 指南 · XDL 技术支持团队

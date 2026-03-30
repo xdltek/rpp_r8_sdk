@@ -50,16 +50,29 @@ lspci | grep Co-processor
 
 
 
-## 3. SDK Installation - Step 1: Download the Package
+## 3. SDK Installation - Step 1: Download and unpack the package
 
-Download from the official channel:
+The x86 SDK package is provided in the `sdk` folder:
 
 ```
-azurengine_sw_<version>_x86_Ubuntu.run
+azurengine_sw_v1.7.3.11_x86_Ubuntu.tar.gz
 ```
 
-Example: `azurengine_sw_v1.7.2.4_x86_Ubuntu.run`
+Unpack it first:
 
+```bash
+tar zxvf azurengine_sw_v1.7.3.11_x86_Ubuntu.tar.gz
+cd azurengine_sw_v1.7.3.11_x86_Ubuntu
+```
+
+The extracted folder contains:
+
+- `azurengine_sw_v1.7.3.11_x86_Ubuntu.run`
+- `get_version.sh`
+- `install.sh`
+- `uninstall.sh`
+- `upgrade.sh`
+- `verify_run_file.sh`
 
 
 ## 3. SDK Installation - Step 2: Uninstall the Previous Version (Recommended)
@@ -75,21 +88,44 @@ bash /usr/local/rpp/doc/uninstall.sh
 
 
 
-## 3. SDK Installation - Step 3: Run the Installer
+## 3. SDK Installation - Step 3: Run the installer and upgrade scripts
+
+Verify the SDK package:
 
 ```bash
-sudo chmod +x azurengine_sw_v1.7.2.4_x86_Ubuntu.run
-bash azurengine_sw_v1.7.2.4_x86_Ubuntu.run
+bash verify_run_file.sh
 ```
 
-During installation:
+Expected output:
 
-- Automatically uninstall and reinstall the RPP driver
-- Check and install system dependencies
+`Verification passed: MD5 checksum matches for file: azurengine_sw_v1.7.3.11_x86_Ubuntu.run`
 
-Make sure there are no errors and that the SDK version and timestamp are displayed
+Check the current installed version:
 
+```bash
+bash get_version.sh
+```
 
+Example output:
+
+`1.7.2.4`
+
+Upgrade to the new SDK:
+
+```bash
+bash upgrade.sh
+```
+
+If the installation succeeds, you should see:
+
+`Installation completed, sdk version: [1.7.3.11], creation timestamp: [20260326_195602].`
+
+Alternatively, you can uninstall and install via the provided scripts:
+
+```bash
+bash uninstall.sh
+bash install.sh
+```
 
 ## 4. Driver Installation and Verification
 
@@ -205,6 +241,7 @@ XDL Technologies products comply with relevant safety and environmental regulati
 - **Version 2.0** (2026-01-18): Initial release of the RPP SDK Installation Guide for x86_64 platforms.
 - **Version 2.1** (2026-02-07): Updated formatting and added detailed troubleshooting steps based on customer feedback.
 - **Version 2.2** (2026-03-19): Updated to Installation and Deployment Guide for x86_64 platforms.
+- **Version 2.3** (2026-03-30): Updated x86 SDK installation instructions for `azurengine_sw_v1.7.3.11_x86_Ubuntu.tar.gz`.
 
 
 ## Revision History
@@ -214,5 +251,6 @@ XDL Technologies products comply with relevant safety and environmental regulati
 | 2.0     | 2026-01-18 | XDL Technical Support Team | Initial version                    |
 | 2.1     | 2026-02-07 | XDL Technical Support Team | Release                            |
 | 2.2     | 2026-03-19 | XDL Technical Support Team | Updated to Installation and Deployment Guide |
+| 2.3     | 2026-03-30 | XDL Technical Support Team | Updated x86 SDK installation |
 
 **Technical support**: XDL Demo Guide · XDL Technical Support Team
