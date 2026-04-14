@@ -24,7 +24,7 @@ Before installation, make sure the target system meets the minimum requirements:
 - **Operating system**: Ubuntu 20.04 LTS (aarch64)
 - **System memory**: >= 16 GB DDR5
 - **CPU architecture**: aarch64 (supports PCIe Gen3)
-- **Compiler**: GCC 9.4.0 · **CMake**: >= 3.16 · **Python**: 3.11
+- **Compiler**: GCC 9.4.0 · **CMake**: >= 3.26.5 · **Python**: 3.11
 - **Build tools**: `build-essential`, `linux-headers`
 
 > Failing to meet these requirements may cause installation failure or unstable runtime behavior
@@ -50,16 +50,29 @@ lspci | grep Co-processor
 
 
 
-## 3. SDK Installation - Step 1: Download the Package
+## 3. SDK Installation - Step 1: Download and unpack the package
 
-Download from the official channel:
+The ARM SDK package is provided in the `sdk` folder:
 
 ```
-azurengine_sw_<version>_aarch64_Ubuntu.run
+azurengine_sw_v1.7.3.14_aarch64_Ubuntu.tar.gz
 ```
 
-Example: `azurengine_sw_v1.7.1.1_aarch64_Ubuntu.run`
+Unpack it first:
 
+```bash
+tar zxvf azurengine_sw_v1.7.3.14_aarch64_Ubuntu.tar.gz
+cd azurengine_sw_v1.7.3.14_aarch64_Ubuntu
+```
+
+The extracted folder contains:
+
+- `azurengine_sw_v1.7.3.14_aarch64_Ubuntu.run`
+- `get_version.sh`
+- `install.sh`
+- `uninstall.sh`
+- `upgrade.sh`
+- `verify_run_file.sh`
 
 
 ## 3. SDK Installation - Step 2: Uninstall the Previous Version (Recommended)
@@ -75,21 +88,44 @@ bash /usr/local/rpp/doc/uninstall.sh
 
 
 
-## 3. SDK Installation - Step 3: Run the Installer
+## 3. SDK Installation - Step 3: Run the installer and upgrade scripts
+
+Verify the SDK package:
 
 ```bash
-sudo chmod +x azurengine_sw_v1.7.1.1_aarch64_Ubuntu.run
-bash azurengine_sw_v1.7.1.1_aarch64_Ubuntu.run
+bash verify_run_file.sh
 ```
 
-During installation:
+Expected output:
 
-- Automatically uninstall and reinstall the RPP driver
-- Check and install system dependencies
+`Verification passed: MD5 checksum matches for file: azurengine_sw_v1.7.3.14_aarch64_Ubuntu.run`
 
-Make sure there are no errors and that the SDK version and timestamp are displayed
+Check the current installed version:
 
+```bash
+bash get_version.sh
+```
 
+Example output:
+
+`1.7.2.4`
+
+Upgrade to the new SDK:
+
+```bash
+bash upgrade.sh
+```
+
+If the installation succeeds, you should see:
+
+`Installation completed, sdk version: [1.7.3.14], creation timestamp: [20260404_181046].`
+
+Alternatively, you can uninstall and install via the provided scripts:
+
+```bash
+bash uninstall.sh
+bash install.sh
+```
 
 ## 4. Driver Installation and Verification
 
@@ -113,22 +149,6 @@ sudo chmod 666 /dev/rpp0_entire_ctrl /dev/ve0_entire_ctrl
 |------|------|
 | `File exists` | The driver is already loaded; no action needed |
 | `Invalid module format` | Rebuild with `make clean && make -j$(nproc)` and then repeat the load steps |
-
-
-
-## 5. Troubleshooting - SDK Installation Failure
-
-**Symptom**: `dpkg: error processing archive /tmp/xxx`
-
-**Possible cause**: conflicting or outdated package `azurengine-ae-smi`
-
-**Resolution**:
-
-```bash
-sudo dpkg -r azurengine-ae-smi
-```
-
-Re-run the SDK installer after removal.
 
 
 
@@ -177,7 +197,7 @@ The information contained in this document is provided "as is" by XDL Technologi
 
 ## 9. Copyright
 
-© 2026 XDL Technologies. All rights reserved. No part of this document may be reproduced or transmitted in any form or by any means, electronic or mechanical, including photocopying, recording, or any information storage and retrieval system, without the prior written permission of XDL Technologies.
+漏 2026 XDL Technologies. All rights reserved. No part of this document may be reproduced or transmitted in any form or by any means, electronic or mechanical, including photocopying, recording, or any information storage and retrieval system, without the prior written permission of XDL Technologies.
 
 
 ## 10. Support
@@ -221,6 +241,7 @@ XDL Technologies products comply with relevant safety and environmental regulati
 - **Version 2.0** (2026-01-18): Initial release of the RPP SDK Installation Guide for ARM (aarch64) platforms.
 - **Version 2.1** (2026-02-07): Updated formatting and added detailed troubleshooting steps based on customer feedback.
 - **Version 2.2** (2026-03-19): Updated to Installation and Deployment Guide for ARM (aarch64) platforms.
+- **Version 2.3** (2026-04-14): Updated ARM SDK installation instructions for `azurengine_sw_v1.7.3.14_aarch64_Ubuntu.tar.gz`.
 
 
 ## Revision History
@@ -230,5 +251,6 @@ XDL Technologies products comply with relevant safety and environmental regulati
 | 2.0     | 2026-01-18 | XDL Technical Support Team | Initial version                    |
 | 2.1     | 2026-02-07 | XDL Technical Support Team | Release                            |
 | 2.2     | 2026-03-19 | XDL Technical Support Team | Updated to Installation and Deployment Guide |
+| 2.3     | 2026-04-14 | XDL Technical Support Team | Updated ARM SDK installation |
 
 **Technical support**: XDL Demo Guide · XDL Technical Support Team
