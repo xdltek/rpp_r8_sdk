@@ -58,7 +58,17 @@ x86 SDK 安装包位于 `sdk` 目录下：
 azurengine_sw_v1.7.3.11_x86_Ubuntu.tar.gz
 ```
 
-请先解压：
+解压前请先校验下载包的 MD5 值：
+
+```bash
+md5sum azurengine_sw_v1.7.3.11_x86_Ubuntu.tar.gz
+```
+
+预期输出：
+
+`0c18b307cfcbb6a73287e38d392406d7  azurengine_sw_v1.7.3.11_x86_Ubuntu.tar.gz`
+
+MD5 一致后再执行解压：
 
 ```bash
 tar zxvf azurengine_sw_v1.7.3.11_x86_Ubuntu.tar.gz
@@ -242,6 +252,7 @@ XDL Technologies 产品符合相关安全与环保法规。用户应遵循产品
 - **版本 2.1**（2026-02-07）：根据客户反馈更新版式并补充详细故障排除步骤。
 - **版本 2.2**（2026-03-19）：更新为 x86_64 平台《安装与部署指南》。
 - **版本 2.3**（2026-03-30）：更新 x86 SDK 安装说明，适配 `azurengine_sw_v1.7.3.11_x86_Ubuntu.tar.gz`。
+- **版本 2.4**（2026-04-15）：补充 `azurengine_sw_v1.7.3.11_x86_Ubuntu.tar.gz` 的 MD5 校验说明。
 
 
 ## 修订历史
@@ -252,5 +263,6 @@ XDL Technologies 产品符合相关安全与环保法规。用户应遵循产品
 | 2.1  | 2026-02-07 | XDL 技术支持团队 | 发布                         |
 | 2.2  | 2026-03-19 | XDL 技术支持团队 | 更新为《安装与部署指南》     |
 | 2.3  | 2026-03-30 | XDL 技术支持团队 | 更新 x86 SDK 安装说明 |
+| 2.4  | 2026-04-15 | XDL 技术支持团队 | 补充 tar.gz MD5 校验说明 |
 
 **技术支持**：XDL Demo 指南 · XDL 技术支持团队

@@ -58,7 +58,17 @@ ARM SDK 安装包位于 `sdk` 目录中：
 azurengine_sw_v1.7.3.14_aarch64_Ubuntu.tar.gz
 ```
 
-先执行解压：
+解压前请先校验下载包的 MD5 值：
+
+```bash
+md5sum azurengine_sw_v1.7.3.14_aarch64_Ubuntu.tar.gz
+```
+
+预期输出：
+
+`9b24133c2412657ff63d6cf09f51fab4  azurengine_sw_v1.7.3.14_aarch64_Ubuntu.tar.gz`
+
+MD5 一致后再执行解压：
 
 ```bash
 tar zxvf azurengine_sw_v1.7.3.14_aarch64_Ubuntu.tar.gz
@@ -242,6 +252,7 @@ XDL Technologies 产品符合相关安全和环保法规。建议用户遵循产
 - **版本 2.1**（2026-02-07）：根据客户反馈更新版式，并补充详细故障排查步骤。
 - **版本 2.2**（2026-03-19）：更新为 ARM（aarch64）平台《安装与部署指南》。
 - **版本 2.3**（2026-04-14）：更新 ARM SDK 安装说明，适配 `azurengine_sw_v1.7.3.14_aarch64_Ubuntu.tar.gz`。
+- **版本 2.4**（2026-04-15）：补充 `azurengine_sw_v1.7.3.14_aarch64_Ubuntu.tar.gz` 的 MD5 校验说明。
 
 
 ## 修订历史
@@ -252,5 +263,6 @@ XDL Technologies 产品符合相关安全和环保法规。建议用户遵循产
 | 2.1  | 2026-02-07 | XDL 技术支持团队 | 发布 |
 | 2.2  | 2026-03-19 | XDL 技术支持团队 | 更新为安装与部署指南 |
 | 2.3  | 2026-04-14 | XDL 技术支持团队 | 更新 ARM SDK 安装说明 |
+| 2.4  | 2026-04-15 | XDL 技术支持团队 | 补充 tar.gz MD5 校验说明 |
 
 **技术支持**：XDL Demo Guide · XDL 技术支持团队

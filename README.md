@@ -25,6 +25,10 @@ For exact package names, versions, and commands, always use the matching guide b
 | SDK Installation & Deployment Guide (x86) | [EN](https://github.com/xdltek/rpp_r8_sdk/raw/main/xdl-sdk-installation-deployment-guide-x86-en.pdf) | [中文](https://github.com/xdltek/rpp_r8_sdk/raw/main/xdl-sdk-installation-deployment-guide-x86-zh-cn.pdf) |
 | SDK Installation & Deployment Guide (ARM) | [EN](https://github.com/xdltek/rpp_r8_sdk/raw/main/xdl-sdk-installation-deployment-guide-arm-en.pdf) | [中文](https://github.com/xdltek/rpp_r8_sdk/raw/main/xdl-sdk-installation-deployment-guide-arm-zh-cn.pdf) |
 
+## Presentation Materials
+
+- Customer training PPT draft: [docs/presentation/sdk-installation-customer-training-en.md](docs/presentation/sdk-installation-customer-training-en.md)
+
 ## Notes
 
 - Commands, package names, and version examples may differ between x86 and ARM guides.

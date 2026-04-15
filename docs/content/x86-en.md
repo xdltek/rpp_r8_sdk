@@ -58,7 +58,17 @@ The x86 SDK package is provided in the `sdk` folder:
 azurengine_sw_v1.7.3.11_x86_Ubuntu.tar.gz
 ```
 
-Unpack it first:
+Verify the downloaded package MD5 before unpacking:
+
+```bash
+md5sum azurengine_sw_v1.7.3.11_x86_Ubuntu.tar.gz
+```
+
+Expected output:
+
+`0c18b307cfcbb6a73287e38d392406d7  azurengine_sw_v1.7.3.11_x86_Ubuntu.tar.gz`
+
+If the MD5 value matches, unpack it:
 
 ```bash
 tar zxvf azurengine_sw_v1.7.3.11_x86_Ubuntu.tar.gz
@@ -242,6 +252,7 @@ XDL Technologies products comply with relevant safety and environmental regulati
 - **Version 2.1** (2026-02-07): Updated formatting and added detailed troubleshooting steps based on customer feedback.
 - **Version 2.2** (2026-03-19): Updated to Installation and Deployment Guide for x86_64 platforms.
 - **Version 2.3** (2026-03-30): Updated x86 SDK installation instructions for `azurengine_sw_v1.7.3.11_x86_Ubuntu.tar.gz`.
+- **Version 2.4** (2026-04-15): Added MD5 verification instructions for `azurengine_sw_v1.7.3.11_x86_Ubuntu.tar.gz`.
 
 
 ## Revision History
@@ -252,5 +263,6 @@ XDL Technologies products comply with relevant safety and environmental regulati
 | 2.1     | 2026-02-07 | XDL Technical Support Team | Release                            |
 | 2.2     | 2026-03-19 | XDL Technical Support Team | Updated to Installation and Deployment Guide |
 | 2.3     | 2026-03-30 | XDL Technical Support Team | Updated x86 SDK installation |
+| 2.4     | 2026-04-15 | XDL Technical Support Team | Added tar.gz MD5 verification instructions |
 
 **Technical support**: XDL Demo Guide · XDL Technical Support Team
