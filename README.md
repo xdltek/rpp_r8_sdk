@@ -17,19 +17,6 @@ High-performance AI inference SDK optimized for **RPP accelerators (DSP + CUDA)*
 
 ---
 
-## ⚡ Performance (Example)
-
-| Model    | Platform | Latency  | Speedup |
-| -------- | -------- | -------- | ------- |
-| YOLOv5   | CPU      | 120ms    | 1x      |
-| YOLOv5   | RPP      | **18ms** | 🚀 6.6x |
-| ResNet50 | CPU      | 35ms     | 1x      |
-| ResNet50 | RPP      | **6ms**  | 🚀 5.8x |
-
-> 📌 Replace with your real benchmark (必须做)
-
----
-
 ## 🎬 Quick Start
 
 ```bash
@@ -50,6 +37,8 @@ make -j
 * YOLOv5 / YOLOv8
 * ResNet50
 * ONNX models
+* Qwen Series
+* Transformer models
 
 ---
 
