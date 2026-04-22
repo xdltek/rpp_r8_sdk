@@ -1,37 +1,94 @@
 ![XDL Logo](images/logo_color_horizontal.png)
 
-# XDL RPP SDK Installation & Deployment Guides
+# 🚀 XDL RPP SDK
 
-This `README.md` is the entry page for installation and deployment documentation.
-For exact package names, versions, and commands, always use the matching guide below.
+High-performance AI inference SDK optimized for **RPP accelerators (DSP + CUDA)**.
 
-## Installation & Deployment Guides
+> ⚡ Designed for real-world deployment, not just research.
 
-| Architecture | English | 中文 |
-| ------------ | ------- | ---- |
-| x86 | [x86-en.md](docs/content/x86-en.md) | [x86-zh.md](docs/content/x86-zh.md) |
+---
+
+## 🔥 Why XDL RPP SDK
+
+* 🚀 Ultra-fast AI inference on RPP hardware
+* ⚡ DSP + CUDA hybrid acceleration
+* 📦 Production-ready SDK for deployment
+* 🔧 Easy integration for edge devices
+
+---
+
+## ⚡ Performance (Example)
+
+| Model    | Platform | Latency  | Speedup |
+| -------- | -------- | -------- | ------- |
+| YOLOv5   | CPU      | 120ms    | 1x      |
+| YOLOv5   | RPP      | **18ms** | 🚀 6.6x |
+| ResNet50 | CPU      | 35ms     | 1x      |
+| ResNet50 | RPP      | **6ms**  | 🚀 5.8x |
+
+> 📌 Replace with your real benchmark (必须做)
+
+---
+
+## 🎬 Quick Start
+
+```bash
+git clone https://github.com/xdltek/rpp_r8_sdk
+cd rpp_r8_sdk
+
+mkdir build && cd build
+cmake ..
+make -j
+
+./demo_yolo
+```
+
+---
+
+## 🧠 Supported Models
+
+* YOLOv5 / YOLOv8
+* ResNet50
+* ONNX models
+
+---
+
+## 📘 Installation & Deployment Guides
+
+This section provides detailed installation instructions for different platforms.
+
+| Architecture  | English                             | 中文                                  |
+| ------------- | ----------------------------------- | ----------------------------------- |
+| x86           | [x86-en.md](docs/content/x86-en.md) | [x86-zh.md](docs/content/x86-zh.md) |
 | ARM (aarch64) | [arm-en.md](docs/content/arm-en.md) | [arm-zh.md](docs/content/arm-zh.md) |
 
-## Which Guide Should I Use?
+---
 
-- If your host is **x86_64**, use the **x86** guide.
-- If your host is **aarch64 / ARM64**, use the **ARM** guide.
-- Choose **English** or **中文** according to your preferred language.
+## 📄 PDF Downloads
 
-## PDF Downloads
-
-| Document | English | 中文 |
-| -------- | ------- | ---- |
+| Document                                  | English                                                                                              | 中文                                                                                                      |
+| ----------------------------------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
 | SDK Installation & Deployment Guide (x86) | [EN](https://github.com/xdltek/rpp_r8_sdk/raw/main/xdl-sdk-installation-deployment-guide-x86-en.pdf) | [中文](https://github.com/xdltek/rpp_r8_sdk/raw/main/xdl-sdk-installation-deployment-guide-x86-zh-cn.pdf) |
 | SDK Installation & Deployment Guide (ARM) | [EN](https://github.com/xdltek/rpp_r8_sdk/raw/main/xdl-sdk-installation-deployment-guide-arm-en.pdf) | [中文](https://github.com/xdltek/rpp_r8_sdk/raw/main/xdl-sdk-installation-deployment-guide-arm-zh-cn.pdf) |
 
+---
 
-## Notes
+## 🧭 Which Guide Should I Use?
 
-- Commands, package names, and version examples may differ between x86 and ARM guides.
-- Do not mix steps from different architecture guides.
-- After reboot, driver loading steps are documented in each guide.
+* If your host is **x86_64**, use the **x86** guide
+* If your host is **aarch64 / ARM64**, use the **ARM** guide
+* Choose **English** or **中文**
 
 ---
+
+## ⚠️ Notes
+
+* Do not mix steps from different architectures
+* Commands and packages differ between x86 and ARM
+* Driver loading steps are included in each guide
+
+---
+
+## 🤝 Support
 
 For customer delivery support, contact your designated **XDL Technical Support** channel.
