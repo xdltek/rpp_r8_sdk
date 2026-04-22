@@ -1,10 +1,16 @@
-![XDL Logo](images/logo_color_horizontal.png)
+<p align="center">
+  <img src="images/logo_color_horizontal.png" width="300"/>
+</p>
 
-# 🚀 XDL RPP SDK
+<h1 align="center">🚀 XDL RPP SDK</h1>
 
-High-performance AI inference SDK optimized for **RPP accelerators (DSP + CUDA)**.
+<p align="center">
+High-performance AI inference SDK for <b>RPP accelerators (DSP + CUDA)</b>
+</p>
 
-> ⚡ Designed for real-world deployment, not just research.
+<p align="center">
+⚡ Designed for real-world deployment, not just research
+</p>
 
 ---
 
